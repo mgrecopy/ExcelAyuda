@@ -9,9 +9,12 @@ body {
     position: relative;
 }
 
-/* Header y logo */
+/* Header y logo en la esquina superior izquierda */
 header {
-    text-align: left;
+    position: absolute; /* Fija el header en la esquina superior izquierda */
+    top: 20px;
+    left: 20px;
+    z-index: 1; /* Asegura que esté sobre el fondo */
 }
 
 .logo-container {
@@ -40,7 +43,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin: 20px auto;
+    margin: 60px auto 20px; /* Más espacio arriba para no tapar el header */
     background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 10px;
@@ -60,8 +63,8 @@ input, select, button, textarea {
 }
 
 textarea {
-    resize: vertical; /* Permite ajustar el tamaño verticalmente, pero no horizontalmente */
-    min-height: 80px; /* Altura mínima para que no sea muy pequeño */
+    resize: vertical;
+    min-height: 80px;
 }
 
 button {
@@ -121,7 +124,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Capa de difuminado blanco */
+/* Capa de fondo blanco sin blur */
 body::before {
     content: '';
     position: absolute;
@@ -129,7 +132,6 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.3);
-    /*backdrop-filter: blur(5px);*/
+    background: rgba(255, 255, 255, 0.8); /* Solo blanco semitransparente */
     z-index: -1;
 }
