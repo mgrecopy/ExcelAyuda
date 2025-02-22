@@ -132,6 +132,6 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.8); /* Solo blanco semitransparente */
+    background: rgba(255, 255, 255, 0.9); /* Solo blanco semitransparente */
     z-index: -1;
 }
