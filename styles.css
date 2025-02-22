@@ -1,12 +1,15 @@
 body {
     font-family: Arial, sans-serif;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina padding por defecto */
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+    width: 100%; /* Ocupa todo el ancho */
     background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
 }
 
 /* Header y logo en la esquina superior izquierda */
