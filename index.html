@@ -3,15 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayuda con Excel</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Archivo CSS para estilos -->
+    <title>ExcelAyuda - Tu solución en Excel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Ícono de la página -->
 </head>
 <body>
     <header>
-        <h1>Ayuda con tus libros de Excel</h1>
+        <h1>ExcelAyuda</h1>
         <p>Sube tu archivo y te ayudaremos de forma sencilla.</p>
     </header>
+
     <main>
+        <!-- Sección de ventajas -->
+        <section id="ventajas">
+            <h2>¿Por qué elegirnos?</h2>
+            <ul>
+                <li><strong>Privacidad de los datos:</strong> Tus archivos y correos están seguros con nosotros.</li>
+                <li><strong>Equipo altamente profesional:</strong> Expertos en Excel listos para ayudarte.</li>
+                <li><strong>Solución garantizada:</strong> Resolvemos tus problemas, sin complicaciones.</li>
+            </ul>
+        </section>
+
+        <!-- Formulario -->
         <form id="excel-form" enctype="multipart/form-data">
             <label for="email">Correo electrónico:</label>
             <input type="email" id="email" name="email" required>
@@ -30,5 +43,18 @@
             <button type="submit">Enviar solicitud</button>
         </form>
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 ExcelAyuda. Todos los derechos reservados.</p>
+        <p><a href="terminos.html">Términos y Condiciones</a></p>
+    </footer>
+
+    <script>
+        document.getElementById("excel-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("¡Solicitud enviada! Pronto te contactaremos.");
+        });
+    </script>
 </body>
 </html>
