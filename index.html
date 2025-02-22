@@ -5,27 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ExcelAyuda - Tu solución en Excel</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon-32x32.png" type="image/x-icon"> <!-- Ícono de la página -->
+    <link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
 </head>
 <body>
     <header>
-        <h1>ExcelAyuda</h1>
-        <p>Sube tu archivo y te ayudaremos de forma sencilla.</p>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo ExcelAyuda" class="logo">
+            <h1>ExcelAyuda</h1>
+        </div>
     </header>
 
     <main>
-        <!-- Sección de ventajas -->
-        <section id="ventajas">
-            <h2>¿Por qué elegirnos?</h2>
-            <ul>
-                <li><strong>Privacidad de los datos:</strong> Tus archivos y correos están seguros con nosotros.</li>
-                <li><strong>Equipo altamente profesional:</strong> Expertos en Excel listos para ayudarte.</li>
-                <li><strong>Solución garantizada:</strong> Resolvemos tus problemas, sin complicaciones.</li>
-            </ul>
-        </section>
-
-        <!-- Formulario -->
         <form id="excel-form" enctype="multipart/form-data">
+            <p>Sube tu archivo y te ayudaremos de forma sencilla.</p>
             <label for="email">Correo electrónico:</label>
             <input type="email" id="email" name="email" required>
 
@@ -40,13 +32,24 @@
                 <option value="avanzado">Avanzado</option>
             </select>
 
+            <label for="problem">Cuéntanos tu situación o problema:</label>
+            <textarea id="problem" name="problem" rows="4" placeholder="Describe aquí lo que necesitas resolver..." required></textarea>
+
             <button type="submit">Enviar solicitud</button>
         </form>
+
+        <section id="ventajas">
+            <h2>¿Por qué elegirnos?</h2>
+            <ul>
+                <li class="ventaja">Privacidad de los datos: Tus archivos y correos están seguros con nosotros.</li>
+                <li class="ventaja">Equipo altamente profesional: Expertos en Excel listos para ayudarte.</li>
+                <li class="ventaja">Solución garantizada: Resolvemos tus problemas, sin complicaciones.</li>
+            </ul>
+        </section>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 ExcelAyuda. Todos los derechos reservados.</p>
+        <p>© 2025 ExcelAyuda. Todos los derechos reservados.</p>
         <p><a href="terminos.html">Términos y Condiciones</a></p>
     </footer>
 
@@ -54,6 +57,17 @@
         document.getElementById("excel-form").addEventListener("submit", function(event) {
             event.preventDefault();
             alert("¡Solicitud enviada! Pronto te contactaremos.");
+        });
+
+        window.addEventListener("scroll", function() {
+            const ventajas = document.querySelectorAll(".ventaja");
+            ventajas.forEach((ventaja) => {
+                const position = ventaja.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight;
+                if (position < screenPosition - 100) {
+                    ventaja.classList.add("visible");
+                }
+            });
         });
     </script>
 </body>
