@@ -94,7 +94,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.8); /* Blanco semitransparente */
-    backdrop-filter: blur(1px); /* Efecto de desenfoque */
+    background: rgba(255, 255, 255, 0.9); /* Blanco semitransparente */
+    /*backdrop-filter: blur(1px);  Efecto de desenfoque */
     z-index: -1; /* Detrás del contenido */
 }
