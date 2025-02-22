@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda con Excel</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Archivo CSS para estilos -->
+</head>
+<body>
+    <header>
+        <h1>Ayuda con tus libros de Excel</h1>
+        <p>Sube tu archivo y te ayudaremos de forma sencilla.</p>
+    </header>
+    <main>
+        <form id="excel-form" enctype="multipart/form-data">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="file">Sube tu archivo Excel:</label>
+            <input type="file" id="file" name="file" accept=".xls,.xlsx" required>
+
+            <label for="difficulty">Nivel de dificultad:</label>
+            <select id="difficulty" name="difficulty" required>
+                <option value="">Selecciona una opción</option>
+                <option value="basico">Básico</option>
+                <option value="intermedio">Intermedio</option>
+                <option value="avanzado">Avanzado</option>
+            </select>
+
+            <button type="submit">Enviar solicitud</button>
+        </form>
+    </main>
+</body>
+</html>
