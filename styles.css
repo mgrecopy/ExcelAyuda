@@ -1,15 +1,12 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0; /* Elimina márgenes por defecto */
-    padding: 0; /* Elimina padding por defecto */
-    min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
-    width: 100%; /* Ocupa todo el ancho */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
     background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra el contenido horizontalmente */
 }
 
 /* Header y logo en la esquina superior izquierda */
@@ -41,12 +38,13 @@ p {
     color: #666;
 }
 
-/* Contenedor principal */
+/* Contenedor principal con centrado */
 main {
-    max-width: 600px; /* Limita el ancho del contenido */
-    width: 100%; /* Responsive: se adapta al dispositivo */
+    max-width: 600px;
+    width: 100%;
     padding: 20px;
-    box-sizing: border-box; /* Incluye padding en el ancho */
+    box-sizing: border-box;
+    margin: 0 auto; /* Centra el main horizontalmente */
 }
 
 /* Formulario centrado */
@@ -124,6 +122,7 @@ footer {
     border-top: 1px solid #ccc;
     font-size: 0.9em;
     color: #666;
+    text-align: center; /* Centra el footer */
 }
 
 footer a {
