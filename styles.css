@@ -15,6 +15,8 @@ body {
 /* Header y logo en la esquina superior izquierda */
 header {
     position: absolute;
+    top: 20px;
+    left: 20px;
     z-index: 1;
 }
 
