@@ -11,10 +11,14 @@ body {
 
 /* Header y logo en la esquina superior izquierda */
 header {
-    position: absolute; /* Fija el header en la esquina superior izquierda */
+    position: absolute;
     top: 20px;
     left: 20px;
-    z-index: 1; /* Asegura que esté sobre el fondo */
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco para destacar */
+    padding: 10px 15px; /* Espacio interno */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para separarlo */
 }
 
 .logo-container {
@@ -43,7 +47,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin: 60px auto 20px; /* Más espacio arriba para no tapar el header */
+    margin: 80px auto 20px; /* Más espacio arriba para el header */
     background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 10px;
@@ -132,6 +136,6 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.9); /* Solo blanco semitransparente */
+    background: rgba(255, 255, 255, 0.9);
     z-index: -1;
 }
